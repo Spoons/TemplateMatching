@@ -89,17 +89,19 @@ sol templateMatch(image search, image template) {
     
     sol solution = {};
     image templateRotation = {};
-    //loop through search image
     int comparision = 0;
+	
+	//template rotation
     for (int rotation = 0; rotation < ROTATION; rotation++) {
         rotateImage(&template, &templateRotation, rotation);
         printf("Rotation: %i\n", rotation);
 
+		//cycles through template starting position
         for (int sx = 0; sx <= search.x - template.x; sx++) {
             for (int sy = 0; sy <= search.y - template.y; sy++ ) {
                 
                 colorD = newSSD();
-                //loop through template starting position
+				//compares template to search image
                 for (int tx = 0; tx < templateRotation.x; tx++) {
                     for (int ty = 0; ty < templateRotation.y; ty++) {
                         comparision++;

@@ -1,5 +1,4 @@
 # TemplateMatching
-TemplateMatching.
 
 This utility scores image patches on a frame and returns the greatest score (best match) along with x,y, and theta.
 
